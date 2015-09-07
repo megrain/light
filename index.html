@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" ng-app="bankUser">
+<head>
+  <meta charset="utf-8">
+  <title>SomeBank</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <script src="js/controllers.js"></script>
+  <link rel="stylesheet" href="css/app.css">
+  <link href="bower_components/angular-virtual-keyboard/release/angular-virtual-keyboard.css" rel="stylesheet">
+  <script src="/bower_components/angular-useragent-parser/release/angular-useragent-parser.min.js"></script>
+  <script src="/bower_components/angular-virtual-keyboard/release/angular-virtual-keyboard.js"></script>
+
+<!--Скрипты для клавы на JQuery-->
+  <!--script type="text/javascript" src="js/jquery1.3.1.js"></script-->
+  <!--script type="text/javascript" src="js/jquerykeypad.js"></script-->
+  <!--Необходимвй ID для поля -> id="defaultKeypad"-->
+<!--Конец скриптов-->
+
+
+<!--Виртуальная клава-->
+  <!--script type="text/javascript">
+        $(function () {
+        $('#defaultKeypad').keypad();
+        });
+  </script-->
+<!--Виртуальная клава-->
+
+</head>
+<body ng-controller="bankUserController">
+<header>
+  <h1 class="h_name_bank">{{title}}</h1>
+</header>
+
+          <div class="passlog">
+            <form name="myForm" method="post"  ng-submit="logIn()" novalidate   >
+                <div class="num_card">
+                    <span>Введите номер карты :</span>
+                    <input  ng-model="userInfo.cardcode" class="input_number" type="text" name="cardcode" pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" placeholder="XXXX XXXX XXXX XXXX" required>
+                    <span ng-show="myForm.cardcode.$invalid">Заполните это поле ввода!</span>
+                </div>
+                </br>
+                <div class="pin_card"> 
+                    <span>Введите свой пин-код :</span>
+                    <!--<input type='text' ng-model="yourModel" data-auto-focus ng-virtual-keyboard/>-->
+                    <input onkeypress="javascript: if((event.charCode < 48)||(event.charCode > 48)) return false;" ng-model="userInfo.pincode" name="pincode" class="input_pin" minlength="4" maxlength="4" type="text" placeholder="XXXX"  required ng-virtual-keyboard="{size: 2}">
+                    <span ng-show="myForm.pincode.$invalid">Заполните это поле ввода!</span>
+                </div>
+                <div class="button_subm">
+                  <input type="submit" value="Войти в аккаунт" ng-disabled="myForm.$invalid">
+                </div>
+                <span>{{userInfo}}</br></span>
+                <span ng-repeat="user in users">{{user.name}}</br></span>
+            </form>
+             </br>
+             <div class="push"></div>
+          </div>
+<footer class="footer">
+    <span class="footer_span">(c) 2015 All rights Reserved. DerBank</span>
+</footer>
+</body>
+</html>
+
+<!--
+<input type="text" ng-model="query">
+  <ul>
+    <li ng-repeat="phone in phones | filter:query">
+      <span>{{phone.name}}</span>
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+
+  <p>Общее количестно телефонов : {{phones.length}}</p>
+
+  <table>
+    <tr ng-repeat="i in [0,1,2,3,4,5,6,7,8,9]">
+      <td>{{i+1}}</td>
+    </tr>
+  </table>
+
+  <hr>
+
+  <ul>
+    <li>
+      1. Currency : {{234 | currency}}
+    </li>
+    <li>
+      2. Date : {{12312312311 | date:'dd.MM.yyyy'}}
+    </li>
+    <li>
+      3. Number : {{1234.1 | number:2}}
+    </li>
+    <li>
+      4. LowerCase: {{'Myverylongstring' | lowercase}}
+    </li>
+    <li>
+      5. UpperCase: {{'Myverylongstring' | uppercase }}
+    </li>
+    <li>
+      6. Json : <pre>{{ {'text':'text','text2':'text text'} | json}</pre>
+    </li>
+  </ul>
+
+  <hr>
+
+  <table>
+    <thead>
+      <tr>
+        <th><a href="" ng-click="sort('name')">Name</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="phone in phones | orderBy:sortField:reverse">
+        <td>{{phone.name}}</td>
+        <td>{{phone.snippet}}</td>
+      </tr>
+    </tbody>
+  </table>
+-->

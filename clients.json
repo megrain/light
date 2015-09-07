@@ -1,0 +1,79 @@
+[
+    {
+        "id": 0, 
+        "cardnumber":"1111 1111 1111 1111",
+        "password":"1111",
+        "name":"Ivan",
+        "surname":"Ivanov"
+    }, 
+    {
+        "id": 1, 
+        "cardnumber":"2222 2222 2222 2222 2222",
+        "password":"2222",
+        "name":"Sergey",
+        "surname":"Sidorov"
+    }, 
+    {
+        "id": 2, 
+        "cardnumber":"3333 3333 3333 3333",
+        "password":"3333",
+        "name":"Igor",
+        "surname":"Polevayko"
+    }, 
+    {
+        "id": 3, 
+        "cardnumber":"4444 4444 4444 4444",
+        "password":"4444",
+        "name":"Stas",
+        "surname":"Dobrov"
+    }, 
+    {
+        "id": 4, 
+        "cardnumber":"5555 5555 5555 5555",
+        "password":"5555",
+        "name":"Petya",
+        "surname":"Kozlov"
+    }, 
+    {
+        "id": 5, 
+        "cardnumber":"6666 6666 6666 6666",
+        "password":"6666",
+        "name":"Kolya",
+        "surname":"Vazhov"
+    }, 
+    {
+        "id": 6, 
+        "cardnumber":"7777 7777 7777 7777",
+        "password":"7777",
+        "name":"Stepa",
+        "surname":"Filov"
+    }, 
+    {
+        "id": 7, 
+        "cardnumber":"8888 8888 8888 8888",
+        "password":"8888",
+        "name":"Denis",
+        "surname":"Pashnov"
+    }, 
+    {
+        "id": 8, 
+        "cardnumber":"9999 9999 9999 9999",
+        "password":"9999",
+        "name":"Timur",
+        "surname":"Sokolov"
+    }, 
+    {
+        "id": 9, 
+        "cardnumber":"1234 1234 1234 1234",
+        "password":"1234",
+        "name":"Andrey",
+        "surname":"Krulov"
+    }, 
+    {
+        "id": 10, 
+        "cardnumber":"5678 5678 5678 5678",
+        "password":"5678",
+        "name":"Vasya",
+        "surname":"Mogzhov"
+    }
+]
