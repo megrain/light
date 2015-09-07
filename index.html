@@ -34,7 +34,7 @@
 </header>
 
           <div class="passlog">
-            <form name="myForm" method="post"  ng-submit="logIn()" novalidate   >
+            <form name="myForm" method="post" ng-controller="FormCtrl"  ng-submit="logIn()" novalidate   >
                 <div class="num_card">
                     <span>Введите номер карты :</span>
                     <input  ng-model="userInfo.cardcode" class="input_number" type="text" name="cardcode" pattern="[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}" placeholder="XXXX XXXX XXXX XXXX" required>
